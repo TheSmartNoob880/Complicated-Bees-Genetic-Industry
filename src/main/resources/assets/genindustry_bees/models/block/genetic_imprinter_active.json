@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "genindustry_bees:block/genetic_imprinter_base",
+    "east": "genindustry_bees:block/genetic_imprinter_side_l",
+    "north": "genindustry_bees:block/genetic_imprinter_active",
+    "south": "genindustry_bees:block/genetic_imprinter_base",
+    "up": "genindustry_bees:block/genetic_imprinter_base",
+    "west": "genindustry_bees:block/genetic_imprinter_side_r",
+    "particle": "genindustry_bees:block/genetic_imprinter_base"
+  }
+}

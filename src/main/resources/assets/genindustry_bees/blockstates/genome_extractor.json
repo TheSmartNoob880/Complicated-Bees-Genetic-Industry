@@ -1,0 +1,50 @@
+{
+  "variants": {
+    "facing=down,powered=false": {
+    "model": "genindustry_bees:block/genome_extractor",
+    "x": 90
+  },
+    "facing=down,powered=true": {
+      "model": "genindustry_bees:block/genome_extractor_active",
+      "x": 90
+    },
+    "facing=east,powered=false": {
+      "model": "genindustry_bees:block/genome_extractor",
+      "y": 90
+    },
+    "facing=east,powered=true": {
+      "model": "genindustry_bees:block/genome_extractor_active",
+      "y": 90
+    },
+    "facing=north,powered=false": {
+      "model": "genindustry_bees:block/genome_extractor"
+    },
+    "facing=north,powered=true": {
+      "model": "genindustry_bees:block/genome_extractor_active"
+    },
+    "facing=south,powered=false": {
+      "model": "genindustry_bees:block/genome_extractor",
+      "y": 180
+    },
+    "facing=south,powered=true": {
+      "model": "genindustry_bees:block/genome_extractor_active",
+      "y": 180
+    },
+    "facing=up,powered=false": {
+      "model": "genindustry_bees:block/genome_extractor",
+      "x": -90
+    },
+    "facing=up,powered=true": {
+      "model": "genindustry_bees:block/genome_extractor_active",
+      "x": -90
+    },
+    "facing=west,powered=false": {
+      "model": "genindustry_bees:block/genome_extractor",
+      "y": 270
+    },
+    "facing=west,powered=true": {
+      "model": "genindustry_bees:block/genome_extractor_active",
+      "y": 270
+    }
+  }
+}

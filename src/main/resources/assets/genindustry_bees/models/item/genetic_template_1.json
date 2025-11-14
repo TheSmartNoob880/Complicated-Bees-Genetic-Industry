@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "genindustry_bees:item/genetic_template_1"
+  }
+}

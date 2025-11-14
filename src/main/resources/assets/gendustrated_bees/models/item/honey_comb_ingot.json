@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "gendustrated_bees:item/honey_comb_ingot"
-  }
-}
