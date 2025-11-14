@@ -1,8 +1,6 @@
 package com.thesmartnoob880.gendustrated_bees;
 
 import com.accbdd.complicated_bees.ComplicatedBees;
-import com.accbdd.complicated_bees.registry.GeneRegistration;
-import com.accbdd.complicated_bees.registry.SpeciesRegistration;
 import com.mojang.logging.LogUtils;
 import com.thesmartnoob880.gendustrated_bees.block.entity.modBlockEntities;
 import com.thesmartnoob880.gendustrated_bees.block.modBlocks;

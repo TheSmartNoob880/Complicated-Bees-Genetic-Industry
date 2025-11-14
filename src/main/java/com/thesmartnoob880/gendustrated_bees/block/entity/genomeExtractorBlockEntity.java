@@ -6,7 +6,6 @@ import com.accbdd.complicated_bees.bees.gene.IGene;
 import com.accbdd.complicated_bees.block.entity.AdaptedItemHandler;
 import com.accbdd.complicated_bees.item.*;
 import com.accbdd.complicated_bees.util.UpgradeHelper;
-import com.thesmartnoob880.gendustrated_bees.GendustratedBees;
 import com.thesmartnoob880.gendustrated_bees.config.Config;
 import com.thesmartnoob880.gendustrated_bees.item.geneSampleItem;
 import com.thesmartnoob880.gendustrated_bees.item.modItems;
@@ -108,7 +107,7 @@ public class genomeExtractorBlockEntity extends BlockEntity implements MenuProvi
     public LazyOptional<IItemHandlerModifiable> getOutputItemHandler(){
         return this.outputItemHandler;
     }
-    private final LazyOptional<IItemHandlerModifiable> conjoinedItemHandler = LazyOptional.of(()-> new CombinedInvWrapper(new IItemHandlerModifiable[]{(IItemHandlerModifiable)this.outputItemHandler.resolve().get(), (IItemHandlerModifiable)this.inputItemHandler.resolve().get()}));
+    private final LazyOptional<IItemHandlerModifiable> conjoinedItemHandler = LazyOptional.of(()-> new CombinedInvWrapper(this.outputItemHandler.resolve().get(), this.inputItemHandler.resolve().get()));
     public LazyOptional<IItemHandlerModifiable> getConjoinedItemHandler(){
         return this.conjoinedItemHandler;
     }
@@ -309,10 +308,14 @@ public class genomeExtractorBlockEntity extends BlockEntity implements MenuProvi
     private void updateActiveState(BlockPos pos ,BlockState state) {
         boolean poweredState = state.getValue(BlockStateProperties.POWERED);
         if (poweredState != this.isCrafting){
-            this.level.setBlockAndUpdate(pos, state.setValue(BlockStateProperties.POWERED, this.isCrafting));
+            if (this.level != null) {
+                this.level.setBlockAndUpdate(pos, state.setValue(BlockStateProperties.POWERED, this.isCrafting));
+            }
         }
-        if (getExtractorErrors() >0){
-            this.level.setBlockAndUpdate(pos, state.setValue(BlockStateProperties.POWERED, false));
+        if (getExtractorErrors() >0) {
+            if (this.level != null) {
+                this.level.setBlockAndUpdate(pos, state.setValue(BlockStateProperties.POWERED, false));
+            }
         }
 
         this.setChanged();

@@ -5,7 +5,6 @@ import com.accbdd.complicated_bees.bees.gene.IGene;
 import com.accbdd.complicated_bees.registry.SpeciesRegistration;
 import com.thesmartnoob880.gendustrated_bees.GendustratedBees;
 import com.thesmartnoob880.gendustrated_bees.block.modBlocks;
-import net.minecraft.client.Minecraft;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -45,18 +44,14 @@ public class modCreativeTab {
             .displayItems((pParameters, pOutput)-> {
                 HashMap<ResourceLocation, List<IGene<?>>> uniqueGenes = new HashMap<>();
                 ComplicatedBees.GENE_REGISTRY.get().getKeys().forEach((type)-> uniqueGenes.put(type, new ArrayList<>()));
-                pParameters.holders().lookup(SpeciesRegistration.SPECIES_REGISTRY_KEY).get().listElements().map(Holder.Reference::value).forEach((species)->{
-                    species.getDefaultChromosome().getGenes().forEach((type, gene)->{
-                        List<IGene<?>> UG = uniqueGenes.get(type);
+                pParameters.holders().lookup(SpeciesRegistration.SPECIES_REGISTRY_KEY).get().listElements().map(Holder.Reference::value).forEach((species)-> species.getDefaultChromosome().getGenes().forEach((type, gene)->{
+                    List<IGene<?>> UG = uniqueGenes.get(type);
 
-                        if (!UG.contains(gene)){
-                            UG.add(gene);
-                        }
-                    });
-                });
-                uniqueGenes.forEach((type,genes)->{
-                    pOutput.acceptAll(genes.stream().map((gene)-> geneSampleItem.createGene(type, gene)).toList());
-                });
+                    if (!UG.contains(gene)){
+                        UG.add(gene);
+                    }
+                }));
+                uniqueGenes.forEach((type,genes)-> pOutput.acceptAll(genes.stream().map((gene)-> geneSampleItem.createGene(type, gene)).toList()));
             })
             .build());
 

@@ -1,8 +1,6 @@
 package com.thesmartnoob880.gendustrated_bees.screen;
 
 import com.accbdd.complicated_bees.datagen.ItemTagGenerator;
-import com.accbdd.complicated_bees.item.UpgradeItem;
-import com.accbdd.complicated_bees.screen.slot.ItemSlot;
 import com.accbdd.complicated_bees.screen.slot.OutputSlot;
 import com.accbdd.complicated_bees.screen.slot.TagSlot;
 import com.thesmartnoob880.gendustrated_bees.block.entity.genomeExtractorBlockEntity;
@@ -17,11 +15,7 @@ import net.minecraft.world.inventory.*;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.SlotItemHandler;
-
-import java.util.List;
-
 
 public class genomeExtractorMenu extends AbstractContainerMenu {
 

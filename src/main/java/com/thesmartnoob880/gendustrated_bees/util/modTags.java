@@ -23,7 +23,4 @@ public class modTags {
             return ItemTags.create(new ResourceLocation(GendustratedBees.MODID, name));
         }
     }
-    public static void register(IEventBus eventBus){
-
-    }
 }
