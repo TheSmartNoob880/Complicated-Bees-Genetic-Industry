@@ -1,0 +1,49 @@
+{
+  "item.gendustrated_bees.gene_sample": "Gene Sample",
+  "item.gendustrated_bees.gene_sample.dominance.true": "Dominance: Dominant",
+  "item.gendustrated_bees.gene_sample.dominance.false": "Dominance: Recessive",
+  "item.gendustrated_bees.gene_sample.blank": "Blank Gene Sample",
+  "item.gendustrated_bees.genetic_template.blank": "Blank Genetic Template",
+  "item.gendustrated_bees.genetic_template.complete": "Complete Genetic Template",
+  "item.gendustrated_bees.genetic_template.incomplete": "Incomplete Genetic Template",
+  "item.gendustrated_bees.genetic_template": "Genetic Template",
+  "item.gendustrated_bees.genetic_template.empty": "Missing Gene Sample",
+  "item.gendustrated_bees.genetic_template.dominance.true": "Dominant Gene Sample",
+  "item.gendustrated_bees.genetic_template.dominance.false": "Recessive Gene Sample",
+  "item.gendustrated_bees.genetic_template.more_info": "Hold <Shift> for more information",
+
+  "block.gendustrated_bees.genome_extractor": "Genome Extractor",
+  "block.gendustrated_bees.genetic_imprinter": "Genetic Imprinter",
+
+  "item.gendustrated_bees.basic_labware": "Basic Labware",
+  "item.gendustrated_bees.improved_labware": "Improved Labware",
+  "item.gendustrated_bees.advanced_labware": "Advanced Labware",
+
+  "item.gendustrated_bees.labware.labware_tooltip": "Gene Extraction Chance: %s",
+  "item.gendustrated_bees.honey_comb_ingot": "Honey Comb Ingot",
+  "item.gendustrated_bees.royal_ingot": "Royal Ingot",
+
+  "creativeTab.gendustrated_bees.modItems": "Gendustrated Bees",
+
+  "gui.gendustrated_bees.jei.genome_extractor": "Genome Extractor",
+
+  "gui.gendustrated_bees.gui.genome_extractor.errors.no_rf": "Not enough RF!",
+  "gui.gendustrated_bees.gui.genome_extractor.errors.no_bees": "Missing Princess or Drone to extract from!",
+  "gui.gendustrated_bees.gui.genome_extractor.errors.no_genes": "Missing Blank Gene Samples!",
+  "gui.gendustrated_bees.gui.genome_extractor.errors.no_labware": "Any Valid Labware is required to extract Gene Samples!",
+  "gui.gendustrated_bees.gui.genome_extractor.errors.output_full": "Output Slots are all full!",
+
+  "gui.gendustrated_bees.gui.genetic_imprinter.errors.no_rf": "Not enough RF!",
+  "gui.gendustrated_bees.gui.genetic_imprinter.errors.no_bees": "Missing Princess or Drone to Imprint Genes on!",
+  "gui.gendustrated_bees.gui.genetic_imprinter.errors.no_template": "A Complete Genetic Template Is required for Imprinting!",
+  "gui.gendustrated_bees.gui.genetic_imprinter.errors.output_full": "The Output Slot is full!",
+
+
+
+  "gui.gendustrated_bees.jei.genetic_imprinter": "Genetic Imprinter Examples",
+
+  "gendustrated_bees.jei.info.recycle": "Unwanted Gene Samples and Genetic Templates can be \"recycled\" by smelting them in a furnace to get a blank one back.",
+  "gendustrated_bees.jei.info.add_gene_data": "Put a Gene Sample with the Trait you want in the crafting grid with a Genetic Template to put that Trait on it.",
+  "gendustrated_bees.jei.info.genetic_imprinter.examples": "The recipes for this block in JEI are just examples to show how it works. \nA Genetic Template CAN have any combinations of genes on it, not just the ones shown here!",
+  "gendustrated_bees.jei.info.genome_extractor.examples": "The recipes for this block in JEI only show the default traits for each Bee Species. The Genes you get are entirely dependant on the Princesses/Drones you put in.\nAll Genes have a equal chance to be extracted!"
+}

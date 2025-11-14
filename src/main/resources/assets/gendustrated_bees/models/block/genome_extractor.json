@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "gendustrated_bees:block/genome_extractor_bottom",
+    "east": "gendustrated_bees:block/genome_extractor_sides",
+    "north": "gendustrated_bees:block/genome_extractor_inactive",
+    "south": "gendustrated_bees:block/genome_extractor_sides",
+    "up": "gendustrated_bees:block/genome_extractor_top",
+    "west": "gendustrated_bees:block/genome_extractor_sides",
+    "particle": "gendustrated_bees:block/genome_extractor_sides"
+  }
+}

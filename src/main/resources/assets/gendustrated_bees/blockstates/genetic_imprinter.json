@@ -1,0 +1,50 @@
+{
+  "variants": {
+    "facing=down,powered=false": {
+    "model": "gendustrated_bees:block/genetic_imprinter",
+    "x": 90
+  },
+    "facing=down,powered=true": {
+      "model": "gendustrated_bees:block/genetic_imprinter_active",
+      "x": 90
+    },
+    "facing=east,powered=false": {
+      "model": "gendustrated_bees:block/genetic_imprinter",
+      "y": 90
+    },
+    "facing=east,powered=true": {
+      "model": "gendustrated_bees:block/genetic_imprinter_active",
+      "y": 90
+    },
+    "facing=north,powered=false": {
+      "model": "gendustrated_bees:block/genetic_imprinter"
+    },
+    "facing=north,powered=true": {
+      "model": "gendustrated_bees:block/genetic_imprinter_active"
+    },
+    "facing=south,powered=false": {
+      "model": "gendustrated_bees:block/genetic_imprinter",
+      "y": 180
+    },
+    "facing=south,powered=true": {
+      "model": "gendustrated_bees:block/genetic_imprinter_active",
+      "y": 180
+    },
+    "facing=up,powered=false": {
+      "model": "gendustrated_bees:block/genetic_imprinter",
+      "x": -90
+    },
+    "facing=up,powered=true": {
+      "model": "gendustrated_bees:block/genetic_imprinter_active",
+      "x": -90
+    },
+    "facing=west,powered=false": {
+      "model": "gendustrated_bees:block/genetic_imprinter",
+      "y": 270
+    },
+    "facing=west,powered=true": {
+      "model": "gendustrated_bees:block/genetic_imprinter_active",
+      "y": 270
+    }
+  }
+}
