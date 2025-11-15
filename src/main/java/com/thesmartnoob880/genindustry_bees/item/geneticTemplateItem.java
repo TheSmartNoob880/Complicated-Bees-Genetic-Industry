@@ -14,6 +14,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
@@ -60,7 +61,7 @@ public class geneticTemplateItem extends Item implements IGeneticHolder{
     }
 
     @Override
-    public void appendHoverText(ItemStack pStack, @Nullable Level plevel, List<Component> ptooltipComponents, TooltipFlag pFlag) {
+    public void appendHoverText(ItemStack pStack, @Nullable Level plevel, @NotNull List<Component> ptooltipComponents, @NotNull TooltipFlag pFlag) {
        if (!pStack.hasTag()) return;
        boolean heldShift = Screen.hasShiftDown();
            ComplicatedBees.GENE_REGISTRY.get().getEntries().forEach((entry)->{
@@ -86,7 +87,7 @@ public class geneticTemplateItem extends Item implements IGeneticHolder{
     }
 
     @Override
-    public Component getName(ItemStack stack) {
+    public @NotNull Component getName(ItemStack stack) {
         if (stack.hasTag()){
             if (isCompleteTemplate(stack)){
                 return Component.translatable("item.genindustry_bees.genetic_template.complete");

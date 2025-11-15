@@ -14,6 +14,7 @@ import mezz.jei.api.recipe.category.IRecipeCategory;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
+import org.jetbrains.annotations.NotNull;
 
 public class genomeExtractorCategory implements IRecipeCategory<Species> {
 
@@ -28,12 +29,12 @@ public class genomeExtractorCategory implements IRecipeCategory<Species> {
     }
 
     @Override
-    public RecipeType<Species> getRecipeType() {
+    public @NotNull RecipeType<Species> getRecipeType() {
         return TYPE;
     }
 
     @Override
-    public Component getTitle() {
+    public @NotNull Component getTitle() {
         return TITLE;
     }
 
@@ -48,7 +49,7 @@ public class genomeExtractorCategory implements IRecipeCategory<Species> {
     }
 
     @Override
-    public void setRecipe(IRecipeLayoutBuilder builder, Species species, IFocusGroup iFocusGroup) {
+    public void setRecipe(IRecipeLayoutBuilder builder, @NotNull Species species, @NotNull IFocusGroup iFocusGroup) {
         builder.addSlot(RecipeIngredientRole.INPUT, 28, 27).setSlotName("labware").addIngredients(VanillaTypes.ITEM_STACK, JEIChromosomes.validLabware());
         builder.addSlot(RecipeIngredientRole.INPUT, 14, 53).setSlotName("bees").addIngredients(VanillaTypes.ITEM_STACK, JEIChromosomes.validBees(species));
         builder.addSlot(RecipeIngredientRole.INPUT,42,53).setSlotName("blank_gene").addIngredient(VanillaTypes.ITEM_STACK, JEIChromosomes.blankGene());

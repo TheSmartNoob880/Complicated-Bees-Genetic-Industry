@@ -9,6 +9,7 @@ import net.minecraft.world.inventory.CraftingContainer;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.Level;
+import org.jetbrains.annotations.NotNull;
 
 public class RecipeGeneticTemplate extends CustomRecipe {
     public RecipeGeneticTemplate(ResourceLocation pID, CraftingBookCategory pCatagory) {
@@ -17,7 +18,7 @@ public class RecipeGeneticTemplate extends CustomRecipe {
 
 
     @Override
-    public boolean matches(CraftingContainer container, Level level) {
+    public boolean matches(CraftingContainer container, @NotNull Level level) {
         boolean hasSample= false;
         boolean hasTemplate=false;
 
@@ -34,7 +35,7 @@ public class RecipeGeneticTemplate extends CustomRecipe {
     }
 
     @Override
-    public ItemStack assemble(CraftingContainer container, RegistryAccess registryAccess) {
+    public @NotNull ItemStack assemble(CraftingContainer container, @NotNull RegistryAccess registryAccess) {
         ItemStack template = null;
         CompoundTag tag = null;
         for (ItemStack stack: container.getItems()) {
@@ -59,7 +60,7 @@ public class RecipeGeneticTemplate extends CustomRecipe {
     }
 
     @Override
-    public RecipeSerializer<?> getSerializer() {
+    public @NotNull RecipeSerializer<?> getSerializer() {
         return modRecipes.GENETIC_TEMPLATE.get();
     }
 }

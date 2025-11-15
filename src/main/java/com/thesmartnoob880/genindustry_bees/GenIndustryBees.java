@@ -51,6 +51,7 @@ public class GenIndustryBees {
         context.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
+    @SuppressWarnings("unused")
     private void commonSetup(final FMLCommonSetupEvent event)
     {
         labwareHelper.registerdefault();

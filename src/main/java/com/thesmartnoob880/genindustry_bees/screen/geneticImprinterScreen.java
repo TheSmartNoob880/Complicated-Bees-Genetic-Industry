@@ -26,11 +26,6 @@ public class geneticImprinterScreen extends AbstractContainerScreen<geneticImpri
     }
 
     @Override
-    protected void init() {
-        super.init();
-    }
-
-    @Override
     protected void renderBg(GuiGraphics guiGraphics, float v, int i, int i1) {
         RenderSystem.setShader(GameRenderer::getPositionTexShader);
         RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);

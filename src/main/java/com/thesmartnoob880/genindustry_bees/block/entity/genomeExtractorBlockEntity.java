@@ -42,6 +42,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.*;
 
+@SuppressWarnings("ALL")
 public class genomeExtractorBlockEntity extends BlockEntity implements MenuProvider {
     private static final int LABWARE_SLOT = 0;
     private static final int BEE_SLOT = 1;
@@ -107,6 +108,7 @@ public class genomeExtractorBlockEntity extends BlockEntity implements MenuProvi
     public LazyOptional<IItemHandlerModifiable> getOutputItemHandler(){
         return this.outputItemHandler;
     }
+    @SuppressWarnings("OptionalGetWithoutIsPresent")
     private final LazyOptional<IItemHandlerModifiable> conjoinedItemHandler = LazyOptional.of(()-> new CombinedInvWrapper(this.outputItemHandler.resolve().get(), this.inputItemHandler.resolve().get()));
     public LazyOptional<IItemHandlerModifiable> getConjoinedItemHandler(){
         return this.conjoinedItemHandler;
@@ -202,11 +204,6 @@ public class genomeExtractorBlockEntity extends BlockEntity implements MenuProvi
         }else {
             return super.getCapability(cap, side);
         }
-    }
-
-    @Override
-    public void onLoad() {
-        super.onLoad();
     }
 
     @Override

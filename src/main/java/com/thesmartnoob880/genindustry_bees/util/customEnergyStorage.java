@@ -2,6 +2,7 @@ package com.thesmartnoob880.genindustry_bees.util;
 
 import net.minecraftforge.energy.EnergyStorage;
 
+@SuppressWarnings("ALL")
 public class customEnergyStorage extends EnergyStorage {
     public customEnergyStorage(int capacity){super(capacity);}
 

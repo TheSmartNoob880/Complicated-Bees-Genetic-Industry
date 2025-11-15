@@ -78,7 +78,7 @@ dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
 
     implementation fg.deobf("mezz.jei:jei-${minecraft_version}-forge:${jei_version}")
-    implementation fg.deobf("curse.maven:complicated-bees-1100137:7004319")
+    implementation fg.deobf("curse.maven:complicated-bees-1100137:7160793")
 
 }
 

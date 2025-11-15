@@ -11,6 +11,7 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.SmeltingRecipe;
 import net.minecraft.world.level.Level;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class GeneWipingFurnaceRecipe extends SmeltingRecipe {
@@ -19,20 +20,20 @@ public class GeneWipingFurnaceRecipe extends SmeltingRecipe {
     }
 
     @Override
-    public boolean matches(Container pContainer, Level p_43749_) {
+    public boolean matches(Container pContainer, @NotNull Level p_43749_) {
         ItemStack input = pContainer.getItem(0);
         return super.matches(pContainer, p_43749_)&& input.getItem() instanceof IGeneticHolder holder && holder.hasGeneticData(input);
     }
 
     @Override
-    public RecipeSerializer<?> getSerializer() {
+    public @NotNull RecipeSerializer<?> getSerializer() {
         return modRecipes.FURNACE_RECYCLING.get();
     }
 
     public static class Serializer implements RecipeSerializer<GeneWipingFurnaceRecipe> {
 
         @Override
-        public GeneWipingFurnaceRecipe fromJson(ResourceLocation pLocation, JsonObject pDataFile) {
+        public @NotNull GeneWipingFurnaceRecipe fromJson(@NotNull ResourceLocation pLocation, JsonObject pDataFile) {
             return new GeneWipingFurnaceRecipe(pLocation, Ingredient.valueFromJson(pDataFile.getAsJsonObject("item")).getItems().stream().findFirst().get(), pDataFile.get("time").getAsInt());
         }
 

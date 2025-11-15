@@ -30,9 +30,6 @@ import java.util.stream.Stream;
 
 @JeiPlugin
 public class GenIndustryBeesJEI implements IModPlugin {
-    public GenIndustryBeesJEI(){
-
-    }
 
     @Override
     public @NotNull ResourceLocation getPluginUid() {

@@ -13,7 +13,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
-import org.antlr.v4.runtime.misc.NotNull;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
@@ -24,7 +24,7 @@ public class geneSampleItem extends Item implements IGeneticHolder{
     }
 
     @Override
-    public void appendHoverText(@NotNull ItemStack stack, @Nullable Level p_41422_, @NotNull List<Component> ptooltipComponents, TooltipFlag p_41424_) {
+    public void appendHoverText(@NotNull ItemStack stack, @Nullable Level p_41422_, List<Component> ptooltipComponents, TooltipFlag p_41424_) {
 
         if (stack.getTag() != null && stack.getTag().contains(KEY_GENE_NAME) && stack.getTag().contains(KEY_GENE_VALUE)){
             String transKey = "gene."+stack.getTag().getString(KEY_GENE_NAME).replace(":", ".");
@@ -46,7 +46,7 @@ public class geneSampleItem extends Item implements IGeneticHolder{
     }
 
     @Override
-    public Component getName(ItemStack stack) {
+    public @org.jetbrains.annotations.NotNull Component getName(ItemStack stack) {
         if (stack.hasTag()){
             if (stack.getTag().contains(KEY_GENE_NAME) && stack.getTag().contains(KEY_GENE_VALUE)){
                 return Component.translatable("item.genindustry_bees.gene_sample");

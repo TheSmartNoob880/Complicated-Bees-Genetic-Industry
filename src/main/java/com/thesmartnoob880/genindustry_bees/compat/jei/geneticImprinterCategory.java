@@ -14,6 +14,7 @@ import mezz.jei.api.recipe.category.IRecipeCategory;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
+import org.jetbrains.annotations.NotNull;
 
 public class geneticImprinterCategory implements IRecipeCategory<Species> {
 
@@ -28,10 +29,10 @@ public class geneticImprinterCategory implements IRecipeCategory<Species> {
     }
 
     @Override
-    public RecipeType<Species> getRecipeType() {return TYPE;}
+    public @NotNull RecipeType<Species> getRecipeType() {return TYPE;}
 
     @Override
-    public Component getTitle() {return TITLE;}
+    public @NotNull Component getTitle() {return TITLE;}
 
     @Override
     public IDrawable getBackground() {return this.BACKGROUND;}
@@ -40,7 +41,7 @@ public class geneticImprinterCategory implements IRecipeCategory<Species> {
     public IDrawable getIcon() {return this.ICON;}
 
     @Override
-    public void setRecipe(IRecipeLayoutBuilder builder, Species species, IFocusGroup iFocusGroup) {
+    public void setRecipe(IRecipeLayoutBuilder builder, @NotNull Species species, @NotNull IFocusGroup iFocusGroup) {
         builder.addSlot(RecipeIngredientRole.INPUT, 17, 24).setSlotName("input_bees").addIngredients(VanillaTypes.ITEM_STACK, JEIChromosomes.allValidBees());
         builder.addSlot(RecipeIngredientRole.INPUT, 45, 24).setSlotName("example_template").addIngredient(VanillaTypes.ITEM_STACK, JEIChromosomes.completeTemplate(species));
         builder.addSlot(RecipeIngredientRole.OUTPUT, 115, 24).setSlotName("output_bee").addIngredients(VanillaTypes.ITEM_STACK, JEIChromosomes.validBees(species));

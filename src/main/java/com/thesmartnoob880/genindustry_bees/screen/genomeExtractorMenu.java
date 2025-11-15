@@ -17,11 +17,13 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraftforge.items.SlotItemHandler;
 
+@SuppressWarnings("ConstantValue")
 public class genomeExtractorMenu extends AbstractContainerMenu {
 
     private final Level level;
     private final ContainerData data;
     private final BlockPos pos;
+    @SuppressWarnings({"resource", "DataFlowIssue"})
     public genomeExtractorMenu(int pContainerId, Inventory inv, FriendlyByteBuf extraData){
         this(pContainerId, inv, inv.player.level().getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(6));
     }

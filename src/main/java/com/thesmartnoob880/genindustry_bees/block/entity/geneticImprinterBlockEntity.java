@@ -38,6 +38,7 @@ import org.jetbrains.annotations.Nullable;
 
 import static com.thesmartnoob880.genindustry_bees.item.geneticTemplateItem.isCompleteTemplate;
 
+@SuppressWarnings("ALL")
 public class geneticImprinterBlockEntity extends BlockEntity implements MenuProvider {
     private static final int BEE_SLOT=0;
     private static final int TEMPLATE_SLOT=1;
@@ -98,7 +99,7 @@ public class geneticImprinterBlockEntity extends BlockEntity implements MenuProv
         return this.outputItemHandler;
     }
 
-    private final LazyOptional<IItemHandlerModifiable> conjoinedItemHandler = LazyOptional.of(()-> new CombinedInvWrapper(new IItemHandlerModifiable[]{(IItemHandlerModifiable)this.outputItemHandler.resolve().get(), (IItemHandlerModifiable)this.inputItemHandler.resolve().get()}));
+    private final LazyOptional<IItemHandlerModifiable> conjoinedItemHandler = LazyOptional.of(()-> new CombinedInvWrapper((IItemHandlerModifiable)this.outputItemHandler.resolve().get(), (IItemHandlerModifiable)this.inputItemHandler.resolve().get()));
     public LazyOptional<IItemHandlerModifiable> getConjoinedItemHandler(){
         return this.conjoinedItemHandler;
     }
@@ -199,11 +200,6 @@ public class geneticImprinterBlockEntity extends BlockEntity implements MenuProv
             return this.energyOptional.cast();
         }
         return super.getCapability(cap, side);
-    }
-
-    @Override
-    public void onLoad() {
-        super.onLoad();
     }
 
     @Override

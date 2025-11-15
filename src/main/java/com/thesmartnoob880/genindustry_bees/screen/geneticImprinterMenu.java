@@ -18,6 +18,7 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraftforge.items.SlotItemHandler;
 
 
+@SuppressWarnings("ConstantValue")
 public class geneticImprinterMenu extends AbstractContainerMenu {
     private final Level level;
     private final ContainerData data;
