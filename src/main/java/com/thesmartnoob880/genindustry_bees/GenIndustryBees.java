@@ -64,6 +64,9 @@ public class GenIndustryBees {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
+            //geneColors
+            geneColors.initalLoad();
+
             //Machine GUI Registering
             MenuScreens.register(modMenuTypes.GENOME_EXTRACTOR_MENU.get(), genomeExtractorScreen::new);
             MenuScreens.register(modMenuTypes.GENETIC_IMPRINTER_MENU.get(), geneticImprinterScreen::new);

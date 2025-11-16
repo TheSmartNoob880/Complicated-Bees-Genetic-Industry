@@ -6,6 +6,10 @@ import net.minecraft.ChatFormatting;
 import java.util.HashMap;
 
 public class geneColors {
+
+    public static void initalLoad(){
+
+    }
     public static final HashMap<IGene<?>, Integer> GENE_COLORS =new HashMap<>();
 
     static {
